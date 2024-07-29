@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="{% url 'home' %}">back</a>
+
+    <h3>add contact</h3>
+    <form action="" method="POST"  >
+        {%csrf_token%}
+        <input type="text" name="full_name" placeholder="name" value="">
+        <br>
+
+        <input type="text" name="relationship" placeholder="Relationship" value="">
+        <br>
+
+        <input type="text" name="email" placeholder="Email" value="">
+        <br>
+
+        <input type="text" name="address" placeholder="Address" value="">
+        <br>
+
+        <input type="text" name="phone_number" placeholder="Phone" value="">
+
+        <br>
+
+        <button type="submit">save</button>
+    </form>
+</body>
+</html>

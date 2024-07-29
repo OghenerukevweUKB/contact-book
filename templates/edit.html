@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>edit profile</h2>
+    <a href="{% url 'profile' contact.id %}">back</a>
+
+    <p>{{contact.full_name}}</p>
+    <p>{{contact.relationship}}</p>
+
+    <form action="" method="POST"  >
+        {%csrf_token%}
+        <input type="text" name="full_name" placeholder="name" value="{{contact.full_name}}">
+        <br>
+
+        <input type="text" name="relationship" placeholder="Relationship" value="{{contact.relationship}}">
+        <br>
+
+        <input type="text" name="email" placeholder="Email" value="{{contact.email}}">
+        <br>
+
+        <input type="text" name="address" placeholder="Address" value="{{contact.address}}">
+        <br>
+
+        <input type="text" name="phone_number" placeholder="Phone" value="{{contact.phone_number}}">
+
+        <br>
+
+        <button type="submit">save</button>
+
+    </form>
+
+    <a href="{% url 'delete' contact.id%}">delete</a>
+   
+
+</body>
+</html>
